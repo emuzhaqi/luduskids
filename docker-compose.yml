@@ -1,0 +1,28 @@
+services:
+  api:
+    build: ./LudusKids.Api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./LudusKids.Api:/app          # live-mount source so edits in VS Code trigger dotnet watch
+      - /app/bin                      # anonymous volumes: keep container's own build output
+      - /app/obj                      # separate from your Mac's filesystem (avoids OS mismatch issues)
+      - ./data:/app/data              # SQLite file persists here on your Mac
+    environment:
+      - ConnectionStrings__Default=Data Source=/app/data/luduskids.db
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Jwt__Key=uiFsMErPCvM0lO03BJY8hBClwXMx7sCUu3SRDrFjTUiHdPOh3PxPRa8rGKWRap7x
+      - Jwt__Issuer=LudusKidsApi
+      - Jwt__ExpiresMinutes=60
+
+  web:
+    build: ./luduskids-web
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./luduskids-web:/app
+      - /app/node_modules             # anonymous volume: keeps container's own node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8080/api
+    depends_on:
+      - api
