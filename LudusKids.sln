@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LudusKids.Api", "LudusKids.Api\LudusKids.Api.csproj", "{B93D2BF6-6ED7-44C1-A652-E0BEB16E512A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LudusKids.Api.Tests", "LudusKids.Api.Tests\LudusKids.Api.Tests.csproj", "{B60ADA69-E262-4A73-975E-30200AB4510A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B93D2BF6-6ED7-44C1-A652-E0BEB16E512A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93D2BF6-6ED7-44C1-A652-E0BEB16E512A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93D2BF6-6ED7-44C1-A652-E0BEB16E512A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93D2BF6-6ED7-44C1-A652-E0BEB16E512A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B60ADA69-E262-4A73-975E-30200AB4510A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B60ADA69-E262-4A73-975E-30200AB4510A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B60ADA69-E262-4A73-975E-30200AB4510A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B60ADA69-E262-4A73-975E-30200AB4510A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
